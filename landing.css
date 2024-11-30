@@ -1,5 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@media screen and (min-width: 768px) {
+    
+}
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -9,7 +12,7 @@
 }
 
 :root{
-    --body-color: #fcf5ff;
+    --body-color: #ffffff;
     --sidebar-color: #FFF;
     --primary-color: #7E60BF;
     --primary-color-light: #F6F5FF;
@@ -26,7 +29,6 @@ body{
     height: 100vh;
     background: var(--body-color);
     transition: var(--tran-02);
-    
 }
 
 body.dark{
@@ -54,7 +56,8 @@ body.dark{
 
 .sidebar header .header-text .profession{
     font-size: 10px;
-    text-indent: 15px;
+    text-indent: 25px;
+    margin-top: -5px;
 }
 
 .sidebar{
@@ -66,7 +69,26 @@ body.dark{
     width: 250px;
     padding: 10px 14px;
     z-index: 100;
+    align-items: flex-end;
+    unicode-bidi: isolate;
+    transition: var(--tran-05);
+    
+    overflow-y: scroll;
+    scrollbar-width: thin;
+ 
+    scrollbar-color: var(--sidebar-color) var(--sidebar-color);
 }
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+    background: var(--sidebar-color);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color-dark);
+    border-radius: 10px;
+}
+
 
 .sidebar li{
     height: 50px;
@@ -98,8 +120,9 @@ body.dark{
 }       
 
 .sidebar .image-text img{
-    width: 100px;
+    width: 125px;
     border-radius: 6px;
+    margin-left: 50px;
 }
 
 .sidebar header .image-text{
@@ -114,6 +137,7 @@ header .image-text .header-text{
 
 .header-text .name{
     font-weight: 800;
+    font-size: 20px;
 }
 
 .sidebar header .toggle{
@@ -171,7 +195,7 @@ body.dark .search-box input {
 }
 
 .space-between-menu{
-    height: 100px;
+    height: 50px;
     width: 20px;
 }
 
@@ -196,7 +220,7 @@ body.dark .search-box input {
 }
 
 .sidebar .nav-link .logout-text{
-    margin-top: 300px;
+    margin-top: 95px;
     text-decoration: none;
     height: 100%;
     width: 100%;
@@ -231,7 +255,7 @@ body.dark .sidebar li a:hover {
     position: absolute;
     bottom: 10px;
     left: 5px;
-    top: 800px;
+    top: 650px;
     background: var(--primary-color-light);
 }
 
@@ -283,4 +307,230 @@ body.dark .sidebar li a:hover {
 
 body.dark .switch::before{
     left: 24px;
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff, #ff22e6);
+}
+
+/* Custom Scrollbar */
+
+
+/* MIDDLE PART */
+
+.middle-upload{
+    margin-left: 1000px;
+    margin-top: 77px;
+    transform: translate(-50%, -50%);
+    background-color: #fcfbff;
+    height: 100px;
+    width: 750px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+
+.postbtn{
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #7E60BF;
+    color: #fcfbff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 7px;
+    
+    &:hover{
+        background-color: rgb(247, 202, 247);
+        color: purple;
+        border-color: purple;
+    }
+}
+
+.middle-container{
+    margin-left: 1000px;
+    margin-top: 415px;
+    transform: translate(-50%, -50%);
+    background-color: #fcfbff;
+    overflow: hidden;
+    height: 900px;
+    width: 750px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.post-text{
+    margin-top: 12px;
+    padding-right: 367px;
+    padding-top: 25px;
+    margin-left: 75px;
+    placeholder-color: #7E60BF;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 7px;
+    padding-left: 25px;
+    resize: none;
+    border-width: 0;
+    cursor: text;
+    position: fixed;
+    outline: none;
+
+}
+
+.profile-icon,
+.profile-icon2{
+    margin-left: 17px;
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: fixed;
+    overflow: hidden;
+    margin-right: 25px;
+    cursor: pointer;;
+}
+
+body.dark .middle-upload,
+body.dark .middle-container,
+body.dark .post-text{
+    background-color: #3A3B3C;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.middle-content{
+    position: sticky;
+    margin-left: -350px;
+}
+
+.usrnme-container{
+    margin-left: 75px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 27px;
+    position: fixed;
+    cursor: pointer;
+}
+
+.middle-container .hr-ruler{
+    margin-top: 175px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.middle-container .hugotaray{
+    margin-left: 100px;
+    margin-top: -125px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 0;
+    position: fixed;
+    max-width: 600px;
+}
+
+.middle-container .hugotaray1{
+    margin-left: 100px;
+    margin-top: -195px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 0;
+    position: fixed;
+    max-width: 600px;
+}
+
+.middle-container .bx-dots-horizontal-rounded{
+   float: right;
+   margin-right: 35px;
+   margin-top: 27px;
+   cursor: pointer;
+   font-size: 30px;
+   font-weight: 100;
+}
+
+.middle-container .interactions{
+    font-size: 25px; 
+    margin-top: -290px;
+    margin-left: 85px;
+}
+
+.bx-like,
+.bx-dislike,
+.bx-comment,
+.bx-repost{
+margin-left: 35px;
+cursor: pointer;
+}
+
+#likes,
+#dislikes,
+#comments,
+#reposts{
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.middle-container .interactions .interactions1{
+    margin-top: 215px;
+    font-size: 23px;
+}
+
+.bx-like1,
+.bx-dislike1,
+.bx-comment1,
+.bx-repost1{
+margin-left: 35px;
+cursor: pointer;
+}
+
+
+#likes1,
+#dislikes1,
+#comments1,
+#reposts1{
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.middle-container .hr-ruler1{
+    margin-top: 250px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#cyathere {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.hr-ruler,
+.hr-ruler1{
+    transition: all 0.3s ease;
+    background: white; 
+    color: white;
 }
